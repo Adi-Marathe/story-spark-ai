@@ -110,27 +110,31 @@ const StoriesComponent = () => {
   return (
     <div className="bg-gradient-to-br animate-gradient-slow min-h-screen">
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="py-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <Link to="/">
-            <div className="!rounded-button bg-gradient-to-r from-white/20 to-white/10 hover:from-white/30 hover:to-white/20 text-gray-300 px-3 py-2 flex items-center gap-2 transition-all duration-300 rounded">
-              <i className="fa-solid fa-left-long"></i> BACK
-            </div>
-          </Link>
+        <div className="py-6 flex flex-row items-start justify-between gap-4">
+          <div className="pt-2">
+            <Link to="/">
+              <div className="!rounded-button bg-gradient-to-r from-white/20 to-white/10 hover:from-white/30 hover:to-white/20 text-gray-300 px-3 py-2 flex items-center gap-2 transition-all duration-300 rounded whitespace-nowrap">
+                <i className="fa-solid fa-left-long"></i> BACK
+              </div>
+            </Link>
+          </div>
+
           {!login && (
-            <div className="!rounded-button bg-gradient-to-r from-white/20 to-white/10 text-gray-400 px-3 py-2 flex items-center gap-2 transition-all duration-300 rounded text-sm">
-              Free access for 3 requests —{" "}
-              <Link to="/login">
-                {""}
-                <span className="text-indigo-400 underline font-semibold">
-                  Login
-                </span>{" "}
-              </Link>
-              {""}
-              for more!
+            <div className="pt-2">
+              <div className="!rounded-button bg-gradient-to-r from-white/20 to-white/10 text-gray-400 px-3 py-2 flex items-center gap-2 transition-all duration-300 rounded text-sm whitespace-nowrap">
+                Free access for 3 requests —{" "}
+                <Link to="/login">
+                  <span className="text-indigo-400 underline font-semibold">
+                    Login
+                  </span>
+                </Link>
+                for more!
+              </div>
             </div>
           )}
-          <div className="">
-            <button className="mt-1 !rounded-button bg-gradient-to-r from-white/20 to-white/10 hover:from-white/30 hover:to-white/20 text-gray-300 px-3 py-2 flex items-center gap-2 transition-all duration-300 rounded">
+
+          <div className="flex flex-col items-end pt-2">
+            <button className="!rounded-button bg-gradient-to-r from-white/20 to-white/10 hover:from-white/30 hover:to-white/20 text-gray-300 px-3 py-2 flex items-center gap-2 transition-all duration-300 rounded whitespace-nowrap">
               <span>
                 {" "}
                 <span className="text-gray-400 text-xs">Per Month</span>{" "}
